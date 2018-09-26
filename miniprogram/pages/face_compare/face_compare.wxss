@@ -1,0 +1,68 @@
+.compare-container {
+  position: relative;
+  border-top: 1px solid #ddd;
+  padding: 30rpx;
+}
+.image-container {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+}
+.left-container,
+.right-container {
+  flex: 1;
+  text-align: center
+}
+.left-container {
+  margin-right: 20rpx;
+}
+.image-wrap {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+  background-color: #aaa;
+  margin-bottom: 20rpx;
+}
+.image-wrap text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 35rpx;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.upload-btn {
+  border: 1px solid #33CCCC;
+  background-color: #fff;
+  color: #33CCCC;
+  margin-top: 10rpx;
+}
+.upload-btn.hover {
+  background-color: #339999;
+  color: #fff;
+}
+
+.result-title {
+  font-weight: 700;
+  font-size: 44rpx;
+  margin-bottom: 15rpx;
+  border-top: 1px solid #ddd;
+  margin-top: 20rpx;
+  padding-top: 15rpx;
+}
+
+.compare-btn {
+  position: fixed;
+  bottom: 60rpx;
+  left: 50%;
+  width: 80%;
+  background-color: #33CCCC;
+  color: #fff;
+  transform: translate(-50%, 0);
+}

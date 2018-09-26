@@ -1,0 +1,15 @@
+.joke-item {
+  border-bottom: 1px solid #eee;
+  padding: 80rpx 30rpx;
+}
+.joke-item image,
+.joke-item video {
+  width: 100%;
+  margin: 0 0 20rpx;
+}
+
+.more-btn {
+  text-align: center;
+  height:120rpx;
+  line-height:120rpx;
+}

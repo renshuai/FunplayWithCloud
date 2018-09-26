@@ -1,0 +1,39 @@
+/**index.wxss**/
+.content-block {
+  text-align: left;
+  border-top: 1px solid #ddd;
+}
+.content-title {
+  padding: 20rpx 10rpx;
+  font-weight: 700;
+  background-color: #eee;
+  font-size: 34rpx;
+}
+.function-items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.function-item {
+  width: 33.33%;
+  height: 250rpx;
+  box-sizing: border-box;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  flex-direction: column;
+}
+.function-item:nth-child(3n) {
+  border-right: none;
+}
+
+.function-item icon {
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 60rpx;
+  margin-bottom: 10rpx;
+}

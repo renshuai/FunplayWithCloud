@@ -1,0 +1,24 @@
+<view class="compare-container">
+  <view class='image-container'>
+    <view class='left-container'>
+      <view class='image-wrap'>
+        <image  mode="aspectFit" src='{{leftImageUrl}}' class='image'></image>
+        <text wx:if="{{!leftImageUrl}}">上传图片一</text>
+      </view>
+      <button size='mini' class='upload-btn' hover-class='hover' data-index='1' bindtap="chooseImage">图片一</button>
+    </view>
+    <view class='right-container'>
+      <view class='image-wrap'>
+        <image  mode="aspectFit" src='{{rightImageUrl}}' class='image'></image>
+        <text wx:if="{{!rightImageUrl}}">上传图片二</text>
+      </view>
+      <button size='mini' class='upload-btn' hover-class='hover' data-index='2' bindtap="chooseImage">图片二</button>
+    </view>
+  </view>
+  <view class='result-title'>对比结果:</view>
+  <view wx:if="{{result}}">
+    <text>相似度：</text>
+    <text>{{result.score}}</text>
+  </view>
+  <button class='compare-btn' bindtap='compare'>开始对比</button>
+</view>

@@ -1,0 +1,226 @@
+.container {
+  position: relative;
+  border-top: 1px solid #ddd;
+  padding-bottom: 160rpx;
+}
+.img-preview {
+  background-color: #ddd;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.img-preview image {
+  width: 100%;
+  height: 562rpx;
+}
+.img-preview text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #bbb;
+  font-weight: 700;
+}
+.result-container {
+  padding: 20rpx;
+}
+.result-title {
+  font-weight: 700;
+  font-size: 44rpx;
+  margin-bottom: 20rpx;
+}
+/* 通用文字识别 */
+.word-detect-container {
+  border: 1px solid #ddd;
+  padding: 15rpx 20rpx;
+}
+.words-list {
+  font-size: 30rpx;
+}
+
+
+/* 身份证识别 */
+.idcard-detect-container {
+  border: 1px solid #ddd;
+  padding: 15rpx 20rpx;
+}
+.idcard-detact-wrap {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+.idcard-prop {
+  width: 7em;
+}
+.idcard-prop-value {
+  flex: 1;
+  font-weight: 700;
+}
+
+/* 银行卡识别 */
+.bankcard-detect-container {
+  border: 1px solid #ddd;
+  padding: 15rpx 20rpx;
+}
+.bankcard-detact-wrap {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+.bankcard-prop {
+  width: 6em;
+}
+.bankcard-prop-value {
+  flex: 1;
+  font-weight: 700;
+}
+
+/* 驾驶证识别 */
+.driving-license-detect-container {
+  border: 1px solid #ddd;
+  padding: 15rpx 20rpx;
+}
+.driving-license-detact-wrap {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+.driving-license-prop {
+  width: 7em;
+}
+.driving-license-prop-value {
+  flex: 1;
+  font-weight: 700;
+}
+
+/* 车牌识别 */
+.license-plate-detect-container {
+  border: 1px solid #ddd;
+  padding: 15rpx 20rpx;
+}
+.license-plate-detact-wrap {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+.license-plate-prop {
+  width: 6em;
+}
+.license-plate-prop-value {
+  flex: 1;
+  font-weight: 700;
+}
+
+/* 行驶证识别 */
+.vehicle-license-detect-container {
+  border: 1px solid #ddd;
+  padding: 15rpx 20rpx;
+}
+.vehicle-license-detact-wrap {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+.vehicle-license-prop {
+  width: 7em;
+}
+.vehicle-license-prop-value {
+  flex: 1;
+  font-weight: 700;
+}
+
+/* 营业执照识别 */
+.business-license-detect-container {
+  border: 1px solid #ddd;
+  padding: 15rpx 20rpx;
+}
+.business-license-detact-wrap {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+.business-license-prop {
+  width: 7em;
+}
+.business-license-prop-value {
+  flex: 1;
+  font-weight: 700;
+}
+
+/* 营业执照识别 */
+.passport-detect-container {
+  border: 1px solid #ddd;
+  padding: 15rpx 20rpx;
+}
+.passport-detact-wrap {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+.passport-prop {
+  width: 7em;
+}
+.passport-prop-value {
+  flex: 1;
+  font-weight: 700;
+}
+
+/* 增值税发票识别 */
+.vat-invoice-detect-container {
+  border: 1px solid #ddd;
+  padding: 15rpx 20rpx;
+}
+.vat-invoice-detact-wrap {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+.vat-invoice-prop {
+  width: 7em;
+}
+.vat-invoice-prop-value {
+  flex: 1;
+  font-weight: 700;
+}
+/* 通用发票识别 */
+.receipt-detect-container {
+  border: 1px solid #ddd;
+  padding: 15rpx 20rpx;
+}
+.receipt-detact-wrap {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+.receipt-prop {
+  width: 5em;
+}
+.receipt-prop-value {
+  flex: 1;
+  font-weight: 700;
+}
+
+.btn-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, .8);
+}
+.btn-wrap button {
+  background-color: #33CCCC;
+  width: 70%;
+  font-size: 34rpx;
+}
+.btn-wrap button.idcard-btn {
+  width: 40%;
+}
+.btn-wrap button.hover {
+  background-color: #339999;
+}
+

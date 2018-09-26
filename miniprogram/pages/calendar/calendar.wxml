@@ -1,0 +1,28 @@
+<view class='container'>
+  <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+    <view class="picker">
+      <text>请选择日期：</text>
+      <text class='date-value'>{{date}}</text>
+    </view>
+  </picker>
+  <view class='result-container' wx:if="{{calendar}}">
+    <view class='result-date'>
+      <text>{{calendar.lunarYear}}年 {{calendar.month}}月（{{bigMonth ? '大' : '小'}}） {{calendar.week}} </text>
+    </view>
+    <view class='result-day'>{{calendar.day > 9 ? calendar.day : '0' + calendar.day}}</view>
+    <view class='result-nonglo'>{{calendar.cnmonth}}月{{calendar.cnday}}</view>
+    <view class='result-festival'>{{calendar.festivalList}}</view>
+    <view class='result-tgdz'><text>{{calendar.cyclicalYear}}年 【{{calendar.animal}}年】{{calendar.cyclicalMonth}}月 {{calendar.cyclicalDay}}日</text></view>
+    <view class='detail-container'>
+      <view class='detail-item'>
+        <text class='detail-prop detail-prop-suit'>宜</text>
+        <text class='detail-value'>{{calendar.suit}}</text>
+      </view>
+      <view class='detail-item'>
+        <text class='detail-prop detail-prop-taboo'>忌</text>
+        <text class='detail-value'>{{calendar.taboo}}</text>
+      </view>
+      
+    </view>
+  </view>
+</view>

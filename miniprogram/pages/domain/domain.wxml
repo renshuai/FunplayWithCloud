@@ -1,0 +1,84 @@
+<view class='container'>
+  <view class='search-container'>
+    <input placeholder='请输入查询的域名' bindchange="inputChange" value="{{domain}}"/>
+    <button bindtap='queryDomain'>查询域名</button>
+  </view>
+  <view class='result-container' wx:if="{{fetchBeian && fetchWangbei}}">
+    <text class='result-title'>域名备案</text>
+    <view class='result-item' wx:if="{{beian}}">
+      <view class='result-props'>
+        <text class='result-prop'>域名</text>
+        <text class='result-value'>{{beian.domain}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>备案性质</text>
+        <text class='result-value'>{{beian.nature}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>备案主体</text>
+        <text class='result-value'>{{beian.name}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>首页</text>
+        <text class='result-value'>{{beian.indexUrl}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>备案名称</text>
+        <text class='result-value'>{{beian.sitename}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>备案检查时间</text>
+        <text class='result-value'>{{beian.checkDate}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>主备案号</text>
+        <text class='result-value'>{{beian.icp}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>当前备案号</text>
+        <text class='result-value'>{{beian.nowIcp}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>状态</text>
+        <text class='result-value'>{{beian.type}}</text>
+      </view>
+    </view>
+    <view wx:else>暂无备案信息</view>
+    <text class='result-title'>公安网备</text>
+    <view class='result-item' wx:if="{{wangbei}}">
+      <view class='result-props'>
+        <text class='result-prop'>域名</text>
+        <text class='result-value'>{{wangbei.sitedomain}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>简称</text>
+        <text class='result-value'>{{wangbei.sitename}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>网站类型</text>
+        <text class='result-value'>{{wangbei.sitetype}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>网备编号</text>
+        <text class='result-value'>{{wangbei.id}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>公司名称</text>
+        <text class='result-value'>{{wangbei.comname}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>公司地址</text>
+        <text class='result-value'>{{wangbei.comaddress}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>公司性质</text>
+        <text class='result-value'>{{wangbei.comtype}}</text>
+      </view>
+      <view class='result-props'>
+        <text class='result-prop'>工信部更新时间</text>
+        <text class='result-value'>{{wangbei.cdate}}</text>
+      </view>
+    </view>
+    <view wx:else>暂无网备信息</view>
+  </view> 
+</view>

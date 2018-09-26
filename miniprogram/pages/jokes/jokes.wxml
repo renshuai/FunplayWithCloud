@@ -1,0 +1,11 @@
+<view class="jokes-container">
+  <view wx:for="{{jokes}}" class='joke-item'>
+    <image src='{{item.image0}}' wx:if="{{item.image0 && !item.videouri}}" mode="widthFix"></image>
+    <video src='{{item.videouri}}' wx:if="{{item.videouri}}"></video>
+    <text>{{item.text}}</text>
+  </view>
+  <view bindtap='getJokes' class='more-btn' wx:if="{{jokes.length}}">
+    <text wx:if="{{!loading}}">点击加载更多</text>
+    <icon class='iconfont icon-loading' wx:if="{{loading}}"></icon>
+  </view>
+</view>

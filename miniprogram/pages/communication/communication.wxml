@@ -1,0 +1,29 @@
+<view class='container'>
+  <view class='picker-container'>
+    <view class='picker-wrap'>
+      <picker value="{{speechIndex}}" range="{{speechLanguages}}" mode="selector" range-key='name' bindchange="speechLangChange">
+        <view class="picker">
+          <text class='props-title'>本人语种：</text>
+          <text class='language-value'>{{speechLanguages[speechIndex].name}}</text>
+        </view>
+      </picker>
+      <picker value="{{translateIndex}}" range="{{translateLanguages}}" mode="selector" range-key='name' bindchange="translateLangChange">
+        <view class="picker">
+          <text class='props-title'>翻译语种：</text>
+          <text class='language-value'>{{translateLanguages[translateIndex].name}}</text>
+        </view>
+      </picker>
+    </view>
+    <icon class='iconfont icon-jiantou_shangxiaqiehuan icon-revert' bindtap='revert'></icon>
+  </view>
+  <view>
+    <text class='props-title'>录音内容：</text>
+    <textarea value='{{currentText}}' auto-height placeholder="这里是录音内容" disabled="true"/>
+  </view>
+  <view>
+    <text class='props-title'>翻译内容：</text>
+    <textarea value='{{translateText}}' auto-height placeholder="这里是翻译内容" disabled="true"/>
+  </view>
+  <!-- <view class='props-title'>翻译内容：{{translateText}}</view> -->
+  <button  catchtouchstart="streamRecord" catchtouchend="streamRecordEnd" class='record-btn' hover-class='hover'>录音</button>
+</view>

@@ -1,0 +1,18 @@
+
+
+.record-btn {
+  border-radius: 50%;
+  height: 200rpx;
+  width: 200rpx;
+  line-height: 200rpx;
+  background-color: #33CCCC;
+  color: #fff;
+  position: fixed;
+  bottom: 30rpx;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.hover {
+  background-color: #339999;
+  color: #fff;
+}

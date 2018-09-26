@@ -1,0 +1,240 @@
+<!-- common.wxml -->
+<template name="general_basic">
+  <view class='word-detect-container'>
+    <view wx:for="{{detectResult}}" class='words-list'>{{item.words}}</view>
+  </view>
+</template>
+<template name="bankcard">
+  <view class='bankcard-detect-container'>
+    <view class='bankcard-detact-wrap'>
+      <text class='bankcard-prop'>银行卡卡号：</text>
+      <text class='bankcard-prop-value'>{{bank_card_number}}</text>
+    </view>
+    <view  class='bankcard-detact-wrap'>
+      <text class='bankcard-prop'>银行名称：</text>
+      <text class='bankcard-prop-value'>{{bank_name}}</text>
+    </view>
+    <view  class='bankcard-detact-wrap'>
+      <text class='bankcard-prop'>银行卡类型: </text>
+      <text class='bankcard-prop-value'>{{bank_card_type === 0 ? '不能识别' : (bank_card_type === 1 ? '借记卡' : '信用卡')}}</text>
+    </view>
+  </view>
+</template>
+<template name="idcard">
+  <view class='idcard-detect-container'>
+    <block wx:for="{{detectResult}}">
+      <view class='idcard-detact-wrap'>
+        <text class='idcard-prop'>{{index}}：</text>
+        <text class='idcard-prop-value'>{{item.words}}</text>
+      </view>
+    </block>
+  </view>
+</template>
+<template name="driving_license">
+  <view class='driving-license-detect-container'>
+    <view class='driving-license-detact-wrap'>
+      <text class='driving-license-prop'>姓名: </text>
+      <text class='driving-license-prop-value'>{{detectResult['姓名']['words']}}</text>
+    </view>
+    <view class='driving-license-detact-wrap'>
+      <text class='driving-license-prop'>性别: </text>
+      <text class='driving-license-prop-value'>{{detectResult['性别']['words']}}</text>
+    </view>
+    <view class='driving-license-detact-wrap'>
+      <text class='driving-license-prop'>出生日期: </text>
+      <text class='driving-license-prop-value'>{{detectResult['出生日期']['words']}}</text>
+    </view>
+    <view class='driving-license-detact-wrap'>
+      <text class='driving-license-prop'>国籍: </text>
+      <text class='driving-license-prop-value'>{{detectResult['国籍']['words']}}</text>
+    </view>
+    <view class='driving-license-detact-wrap'>
+      <text class='driving-license-prop'>证号: </text>
+      <text class='driving-license-prop-value'>{{detectResult['证号']['words']}}</text>
+    </view>
+    <view class='driving-license-detact-wrap'>
+      <text class='driving-license-prop'>准驾车型: </text>
+      <text class='driving-license-prop-value'>{{detectResult['准驾车型']['words']}}</text>
+    </view>
+    <view class='driving-license-detact-wrap'>
+      <text class='driving-license-prop'>初次领证日期: </text>
+      <text class='driving-license-prop-value'>{{detectResult['初次领证日期']['words']}}</text>
+    </view>
+    <view class='driving-license-detact-wrap'>
+      <text class='driving-license-prop'>有效期限: </text>
+      <text class='driving-license-prop-value'>{{detectResult['有效期限']['words']}} 至 {{detectResult['至']['words']}}</text>
+    </view>
+    <view class='driving-license-detact-wrap'>
+      <text class='driving-license-prop'>住址: </text>
+      <text class='driving-license-prop-value'>{{detectResult['住址']['words']}}</text>
+    </view>
+  </view>
+</template>
+<template name="vehicle_license">
+  <view class='vehicle-license-detect-container'>
+    <block wx:for="{{detectResult}}">
+      <view class='vehicle-license-detact-wrap'>
+        <text class='vehicle-license-prop'>{{index}}</text>
+        <text class='vehicle-license-prop-value'>{{item.words}}</text>
+      </view>
+    </block>
+  </view>
+</template>
+<template name="business_license">
+  <view class='business-license-detect-container'>
+    <block wx:for="{{detectResult}}">
+      <view class='business-license-detact-wrap'>
+        <text class='business-license-prop'>{{index}}</text>
+        <text class='business-license-prop-value'>{{item.words}}</text>
+      </view>
+    </block>
+  </view>
+</template>
+<template name="passport">
+  <view class='passport-detect-container'>
+    <block wx:for="{{detectResult}}">
+      <view class='passport-detact-wrap'>
+        <text class='passport-prop'>{{index}}</text>
+        <text class='passport-prop-value'>{{item.words}}</text>
+      </view>
+    </block>
+  </view>
+</template>
+<template name="vat_invoice">
+  <view class='vat-invoice-detect-container'>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>发票种类：</text>
+      <text class='vat-invoice-prop-value'>{{InvoiceType}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>发票代码：</text>
+      <text class='vat-invoice-prop-value'>{{InvoiceCode}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>发票号码：</text>
+      <text class='vat-invoice-prop-value'>{{InvoiceNum}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>开票日期：</text>
+      <text class='vat-invoice-prop-value'>{{InvoiceDate}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>开票日期：</text>
+      <text class='vat-invoice-prop-value'>{{InvoiceDate}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>合计金额：</text>
+      <text class='vat-invoice-prop-value'>{{TotalAmount}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>合计税额：</text>
+      <text class='vat-invoice-prop-value'>{{TotalTax}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>价税合计(小写)：</text>
+      <text class='vat-invoice-prop-value'>{{AmountInFiguers}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>价税合计(大写)：</text>
+      <text class='vat-invoice-prop-value'>{{AmountInWords}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>校验码：</text>
+      <text class='vat-invoice-prop-value'>{{CheckCode}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>销售方名称：</text>
+      <text class='vat-invoice-prop-value'>{{SellerName}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>销售方纳税人识别号：</text>
+      <text class='vat-invoice-prop-value'>{{SellerRegisterNum}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>购方名称：</text>
+      <text class='vat-invoice-prop-value'>{{PurchaserName}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>购方纳税人识别号：</text>
+      <text class='vat-invoice-prop-value'>{{PurchaserRegisterNum}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>货物名称：</text>
+      <text class='vat-invoice-prop-value'>{{CommodityName[0].word}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>规格型号：</text>
+      <text class='vat-invoice-prop-value'>{{CommodityType[0].word}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>单位：</text>
+      <text class='vat-invoice-prop-value'>{{CommodityUnit[0].word}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>数量：</text>
+      <text class='vat-invoice-prop-value'>{{CommodityNum[0].word}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>单价：</text>
+      <text class='vat-invoice-prop-value'>{{CommodityPrice[0].word}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>金额：</text>
+      <text class='vat-invoice-prop-value'>{{CommodityAmount[0].word}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>税率：</text>
+      <text class='vat-invoice-prop-value'>{{CommodityTaxRate[0].word}}</text>
+    </view>
+    <view class='vat-invoice-detact-wrap'>
+      <text class='vat-invoice-prop'>税额：</text>
+      <text class='vat-invoice-prop-value'>{{CommodityTax[0].word}}</text>
+    </view>
+  </view>
+</template>
+<template name="license_plate">
+  <view class='license-plate-detect-container'>
+    <view class='license-plate-detact-wrap'>
+      <text class='license-plate-prop'>车牌颜色：</text>
+      <text class='license-plate-prop-value'>{{color}}</text>
+    </view>
+    <view  class='license-plate-detact-wrap'>
+      <text class='license-plate-prop'>车牌号码：</text>
+      <text class='license-plate-prop-value'>{{number}}</text>
+    </view>
+  </view>
+</template>
+<template name="receipt">
+  <view class='receipt-detect-container'>
+    <view class='receipt-detact-wrap' wx:for="{{detectResult}}">
+      <text class='receipt-prop'>匹配结果： </text>
+      <text class='receipt-prop-value'>{{item.words}}</text>
+    </view>
+  </view>
+</template>
+<view class='container'>
+  <view class='img-preview'>
+    <image src='{{chooseImageUrl}}'  mode="aspectFit"></image>
+    <text wx:if="{{chooseImageUrl===''}}">请上传图片</text>
+  </view>
+  <view class='result-container'>
+    <view class='result-title'>{{name}}-识别结果:</view>
+    <template is="general_basic" data="{{detectResult}}" wx:if="{{type==='general_basic' && detectResult}}"/>
+    <template is="idcard" data="{{detectResult}}" wx:if="{{type==='idcard' && detectResult}}"/>
+    <template is="bankcard" data="{{...detectResult}}" wx:if="{{type==='bankcard' && detectResult}}"/>
+    <template is="driving_license" data="{{detectResult}}" wx:if="{{type==='driving_license' && detectResult}}"/>
+    <template is="vehicle_license" data="{{detectResult}}" wx:if="{{type==='vehicle_license' && detectResult}}"/>
+    <template is="license_plate" data="{{...detectResult}}" wx:if="{{type==='license_plate' && detectResult}}"/>
+    <template is="business_license" data="{{detectResult}}" wx:if="{{type==='business_license' && detectResult}}"/>
+    <template is="passport" data="{{detectResult}}" wx:if="{{type==='passport' && detectResult}}"/>
+    <template is="vat_invoice" data="{{...detectResult}}" wx:if="{{type==='vat_invoice' && detectResult}}"/>
+    <template is="receipt" data="{{detectResult}}" wx:if="{{type==='receipt' && detectResult}}"/>
+  </view>
+  <view class='btn-wrap' wx:if="{{type==='idcard'}}">
+    <button bindtap='idcardChooseImage' type="primary" size="default" hover-class='hover' data-side='front' class='idcard-btn'>身份证正面</button>
+    <button bindtap='idcardChooseImage' type="primary" size="default" hover-class='hover' data-side='back' class='idcard-btn'>身份证背面</button>
+  </view>
+  <view class='btn-wrap' wx:else>
+    <button bindtap='chooseImage' type="primary" size="default" hover-class='hover'>选择照片</button>
+  </view>
+</view>

@@ -1,0 +1,45 @@
+<view class="container">
+  <view class='map-container' wx:if="{{!weatherShow}}">
+    <map 
+    class='map' 
+    scale="{{scale}}" 
+    show-location
+    latitude='{{latitude}}'
+    longitude='{{longitude}}'
+    markers='{{markers}}'
+    bindregionchange="regionChange"
+    id="myMap"
+    >
+    </map> 
+  </view>
+  <view class='search-container'>
+    <input class='search-place' value='{{city}}' bindblur='inputBlur' bindchange='inputChange'/>
+    <button bindtap='queryWeather' class='query-btn'>查询天气</button>
+  </view>
+  <view class='weather-result' wx:if="{{weatherInfo && weatherShow}}">
+    <icon class='iconfont icon-guanbi weather-icon' bindtap='closeResult'></icon>
+    <view><text class='weather-city'>{{city}}</text></view>
+    <view><text class='weather-temp'>{{weatherInfo.now.tmp}}</text></view>
+    <view class='forecast-wrap'>
+      <block wx:for="{{weatherInfo.daily_forecast}}">
+        <view class='date-result'>
+          <text class='item-date'>{{item.date}}</text>
+          <icon class='{{item.icon}}'></icon>
+          <text class='item-weather-type'>{{item.cond_txt_d}}</text>
+          <text class='item-high'>{{item.tmp_max}}℃</text>
+          <text class='item-low'>{{item.tmp_min}}℃</text>
+        </view>
+      </block>
+      </view>
+      <!-- <view class='result-prop result-hint'><text>今天：{{weatherInfo.lifestyle[0]['txt']}}</text></view> -->
+      <view class='result-prop'><text>日出：{{weatherInfo.daily_forecast[0].sr}}</text></view>
+      <view class='result-prop'><text>日落：{{weatherInfo.daily_forecast[0].ss}}</text></view>
+      <view class='result-prop'><text>湿度：{{weatherInfo.daily_forecast[0].hum}}</text></view>
+      <!-- <view class='result-prop'><text>pm2.5：{{weatherInfo.pm25}}</text></view>
+      <view class='result-prop'><text>pm10：{{weatherInfo.pm10}}</text></view> -->
+      <view class='result-prop'><text>降水量: {{weatherInfo.now.pcpn}}</text></view>
+      <view class='result-prop'><text>风向：{{weatherInfo.now.wind_dir}}</text></view>
+      <view class='result-prop'><text>风力：{{weatherInfo.now.wind_sc}}</text></view>
+      <view class='result-prop' wx:for="{{weatherInfo.lifestyle}}"><text>{{lifeStyleObj[item.type]}}: {{item.brf}}，{{item.txt}}</text></view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<view class='payments-container'>
+  <view class='payments-list'>
+    <view class='payments-item' wx:for="{{payments}}">{{item.description}}</view>
+  </view>
+  {{speechText}}
+  <button  catchtouchstart="streamRecord" catchtouchend="streamRecordEnd" class='record-btn' hover-class='hover'>记一笔</button>
+</view>

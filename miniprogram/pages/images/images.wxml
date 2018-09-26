@@ -1,0 +1,22 @@
+<!-- common.wxml -->
+<view class='container'>
+  <view class='img-preview'>
+    <image src='{{chooseImageUrl}}'  mode="aspectFit"></image>
+  </view>
+  <view class='result-container'>
+    <text class='result-title'>识别结果:</text>
+    <view wx:if="{{detectResult}}" class='result-wrap'>
+      <view>
+        <text class='result-prop'>识别物体：</text>
+        <text class='result-keyword'>{{detectResult.keyword}}</text>
+      </view>
+      <view>
+        <text class='result-prop'>置信度: </text>
+        <text class='result-score'>{{detectResult.score * 100}}%</text>
+      </view>
+    </view>
+  </view>
+  <view class='btn-wrap'>
+    <button bindtap='chooseImage' type="primary" size="default" hover-class='hover'>选择照片</button>
+  </view>
+</view>

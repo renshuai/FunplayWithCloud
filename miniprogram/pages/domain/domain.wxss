@@ -1,0 +1,56 @@
+.container {
+  overflow: auto;
+  border-top: 1px solid #ddd;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  margin-top: 30rpx;
+}
+
+.search-container input {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 10rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.search-container button {
+  font-size: 26rpx;
+  background-color: #33cccc;
+  color: #fff;
+}
+
+.result-container {
+  margin: 20rpx;
+}
+
+.result-item {
+  margin-bottom: 20rpx;
+  border: 1px solid #ddd;
+  padding: 20rpx;
+}
+
+.result-title {
+  font-weight: 700;
+  font-size: 50rpx;
+}
+
+.result-props {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.result-prop {
+  width: 7em;
+  margin-right: 10rpx;
+  font-weight: 700;
+}
+
+.result-value {
+  flex: 1;
+}

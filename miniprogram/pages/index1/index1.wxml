@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='content-block'>
+    <block wx:for="{{functionArrays}}" wx:for-index="index" wx:for-item="item">
+      <view class='content-title'>{{item.name}}</view>
+      <view class='function-items'>
+        <block wx:for="{{item.items}}" wx:for-index="childItemIndex" wx:for-item="childItem">
+          <view class='function-item' data-type="{{childItem.type}}" data-top='{{item.type}}' data-can='{{childItem.canUse}}' data-name="{{childItem.name}}" bindtap='redirectto'>
+            <icon class='iconfont {{childItem.icon}}'></icon>
+            <text>{{childItem.name}}</text>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>
