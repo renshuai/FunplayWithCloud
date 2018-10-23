@@ -1,0 +1,47 @@
+<view class="container">
+  <view>
+    <view class='header'>
+      <view class='number-wrap'>
+        <text>答题数</text>
+        <text class='number'>{{(skip - 1) * 20 + index + 1}}</text>
+      </view>
+      <view class='img-wrap' wx:if="{{list[index].file}}">
+        <image mode="widthFix" src="{{list[index].file}}"></image>
+      </view>
+      <view class='title'>
+        <text>{{list[index]['title']}}</text>
+      </view>
+    </view>
+    <view class='options'>
+      <view wx:if="{{list[index].a}}"  bindtap='optionTap' data-option='1'>
+        <icon type="success" size="40" color='#33CCCC' wx:if="{{clickIndex !== -1 && rightIndex === 1}}"/>
+        <icon type="clear" size="40" color='#999999' wx:if="{{rightIndex !== 1 && clickIndex === 1}}"/>
+        <view class='circle-icon' wx:if="{{clickIndex === -1 || (clickIndex !== 1 && rightIndex !== 1)}}"></view>
+        <text>{{list[index].a}}</text>
+      </view>
+      <view wx:if="{{list[index].b}}"   bindtap='optionTap' data-option='2'>
+        <icon type="success" size="40" color='#33CCCC' wx:if="{{clickIndex !== -1 &&rightIndex === 2}}"/>
+        <icon type="clear" size="40" color='#999999' wx:if="{{rightIndex !== 2 && clickIndex === 2}}"/>
+        <view class='circle-icon' wx:if="{{clickIndex === -1 || (clickIndex !== 2 && rightIndex !== 2)}}"></view>
+        <text>{{list[index].b}}</text></view>
+      <view wx:if="{{list[index].c}}"  bindtap='optionTap' data-option='3'>
+        <icon type="success" size="40" color='#33CCCC' wx:if="{{clickIndex !== -1 &&rightIndex === 3}}"/>
+        <icon type="clear" size="40" color='#999999' wx:if="{{rightIndex !== 3 && clickIndex === 3}}"/>
+        <view class='circle-icon' wx:if="{{clickIndex === -1 || (clickIndex !== 3 && rightIndex !== 3)}}"></view>
+        <text>{{list[index].c}}</text></view>
+      <view  wx:if="{{list[index].d}}"  bindtap='optionTap' data-option='4'>
+        <icon type="success" size="40" color='#33CCCC' wx:if="{{clickIndex !== -1 &&rightIndex === 4}}"/>
+        <icon type="clear" size="40" color='#999999' wx:if="{{rightIndex !== 4 && clickIndex === 4}}"/>
+        <view class='circle-icon' wx:if="{{clickIndex === -1 || (clickIndex !== 4 && rightIndex !== 4)}}"></view>
+        <text>{{list[index].d}}</text></view>
+    </view>
+    <view class="switch-wrap">
+      <text>答完题自动进入下一题</text>
+      <switch checked="{{isAutoNext}}" bindchange="switchChange" color='#33CCCC'/>
+  </view>
+    <view class='operate' wx:if="{{!isAutoNext}}">
+      <button class='prev' bindtap='prev'>上一题</button>
+      <button class='next' bindtap='next'>下一题</button>
+    </view>
+  </view>
+</view>

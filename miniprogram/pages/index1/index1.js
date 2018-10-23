@@ -11,6 +11,55 @@ Page({
     detectResult: null,
     functionArrays: [
       {
+        name: '生活小工具',
+        type: 'tools',
+        items: [
+          {
+            name: '天气查询',
+            icon: 'icon-baitian-shachenbao',
+            type: 'weather',
+            canUse: true
+          },
+          {
+            name: '万年历',
+            icon: 'icon-rili',
+            type: 'calendar',
+            canUse: true
+          },
+          {
+            name: '每日笑话',
+            icon: 'icon-kaixin-',
+            type: 'jokes',
+            canUse: true
+          },
+          {
+            name: '域名查询',
+            icon: 'icon-yuming',
+            type: 'domain',
+            canUse: true
+          },
+          {
+            name: '中英交流',
+            icon: 'icon-fanyi',
+            type: 'communication',
+            canUse: true
+          },
+          {
+            name: '语音记账',
+            icon: 'icon-historical_activity_amount',
+            type: 'payments',
+            canUse: true
+          },
+          {
+            name: '驾考宝典',
+            icon: 'icon-jiaotongyunshu',
+            type: 'cars',
+            canUse: true
+          }
+        ]
+
+      },
+      {
         name: '图像识别',
         type: 'images',
         items: [
@@ -127,49 +176,6 @@ Page({
             canUse: true
           }
         ]
-      },
-      {
-        name: '生活小工具',
-        type: 'tools',
-        items: [
-          {
-            name: '天气查询',
-            icon: 'icon-baitian-shachenbao',
-            type: 'weather',
-            canUse: true
-          },
-          {
-            name: '万年历',
-            icon: 'icon-rili',
-            type: 'calendar',
-            canUse: true
-          },
-          {
-            name: '每日笑话',
-            icon: 'icon-kaixin-',
-            type: 'jokes',
-            canUse: true
-          },
-          {
-            name: '域名查询',
-            icon: 'icon-yuming',
-            type: 'domain',
-            canUse: true
-          },
-          {
-            name: '中英交流',
-            icon: 'icon-fanyi',
-            type: 'communication',
-            canUse: true
-          },
-          {
-            name: '语音记账',
-            icon: 'icon-historical_activity_amount',
-            type: 'payments',
-            canUse: true
-          }
-        ]
-
       }
     ]
   },

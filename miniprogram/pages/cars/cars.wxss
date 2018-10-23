@@ -1,0 +1,88 @@
+.container {
+  padding: 40rpx;
+}
+.header {
+  border: 1px solid #ddd;
+  padding: 0 20rpx;
+  text-align: center;
+  color: #33CCCC;
+  font-size: 40rpx;
+}
+.number-wrap {
+  border-bottom: 1px solid #ddd;
+  padding: 20rpx 0;
+}
+.number {
+  background: #33CCCC;
+  color: #fff;
+  padding: 0 20rpx;
+  margin-left: 10rpx;
+}
+.title {
+  padding: 20rpx 0;
+}
+
+.img-wrap {
+  margin-top: 20rpx;
+}
+
+.img-wrap image {
+  width: 100%;
+}
+
+.options {
+  margin-top: 50rpx;
+  font-size: 40rpx;
+}
+
+.options > view {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+  cursor: pointer;
+}
+
+.options icon {
+  margin-right: 20rpx;
+}
+
+.circle-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  margin-right: 20rpx;
+}
+
+.options > view text {
+  font-weight: 700;
+}
+
+.switch-wrap {
+  margin-top: 50rpx;
+}
+
+.switch-wrap > text {
+  margin-right: 20rpx;
+}
+
+.operate {
+  display: flex;
+  align-items: center;
+}
+.operate button {
+  flex: 1;
+  margin-top: 50rpx;
+}
+
+.prev {
+  margin-right: 50rpx;
+  border: 1px solid #33CCCC;
+  color: #33CCCC;
+  background-color: #fff;
+}
+
+.next {
+  background-color: #33CCCC;
+  color: #fff;
+}

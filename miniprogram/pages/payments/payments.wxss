@@ -1,4 +1,101 @@
+.payments-container {
+  padding: 20rpx 50rpx 250rpx;
+}
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .8)
+}
+.modal text {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40rpx;
+}
+.payments-list {
+  border-left: 2px solid #ddd;
+}
+.payments-item {
+  padding: 20rpx 0;
+  position: relative;
+}
 
+.handle-wrap {
+  position: absolute;
+  right: -50rpx;
+  top: 0;
+  bottom: 0;
+  /* width: 120rpx; */
+  background-color: #ff0000;
+  text-align: center;
+  color: #fff;
+  vertical-align: middle;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-wrap {
+  display: flex;
+  align-items: center;
+}
+.icon-wrap {
+  position: relative;
+  left: -30rpx;
+  color: #fff;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%;
+  line-height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-wrap.canyin {
+  background-color: #78afa6;
+}
+.icon-wrap.gouwu {
+  background-color: #b37aa5;
+}
+.icon-wrap.jiaotong {
+  background-color: #6984bb;
+}
+.icon-wrap.yule {
+  background-color: #e1738e;
+}
+.icon-wrap.yiyao {
+  background-color: #d6aab9;
+}
+.icon-wrap.jujia {
+  background-color: #6caa6d;
+}
+.icon-wrap.touzi {
+  background-color: #ee9242;
+}
+.icon-wrap.renqing {
+  background-color: #9f7661;
+}
+.icon-wrap.other {
+  background-color: #d6a936;
+}
+
+.iconfont {
+  font-size: 34rpx;
+}
+.payments-name {
+  margin-right: 20rpx;
+}
+.payments-description {
+  color: #999;
+  font-size: 26rpx;
+  padding-left: 60rpx;
+}
 
 .record-btn {
   border-radius: 50%;
@@ -11,6 +108,7 @@
   bottom: 30rpx;
   left: 50%;
   transform: translate(-50%, 0);
+  z-index: 2;
 }
 .hover {
   background-color: #339999;

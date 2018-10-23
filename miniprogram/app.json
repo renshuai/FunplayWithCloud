@@ -17,7 +17,8 @@
     "pages/jokes/jokes",
     "pages/face_compare/face_compare",
     "pages/communication/communication",
-    "pages/payments/payments"
+    "pages/payments/payments",
+    "pages/cars/cars"
   ],
   "plugins": {
     "WechatSI": {

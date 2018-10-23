@@ -1,7 +1,16 @@
 <view class='payments-container'>
+  <view class='modal' wx:if="{{showModal}}"><text>{{speechText}}</text></view>
   <view class='payments-list'>
-    <view class='payments-item' wx:for="{{payments}}">{{item.description}}</view>
+    <view class='payments-item' wx:for="{{payments}}" id="{{index}}" bindtouchstart='touchStart' bindtouchend='touchEnd'>
+      <view class='info-wrap'>
+        <view class="{{'icon-wrap ' + item.type}}"><icon class="{{'iconfont ' + typesObj[item.type]['icon']}}"></icon></view>
+        <text class='payments-name'>{{typesObj[item.type]['name']}}</text>
+        <text class='payments-cash'>{{item.cash}}</text>
+      </view>
+      <text class='payments-description'>{{item.description}}  {{item.date}}</text>
+      <view wx:if="{{touchIndex == index}}" class='handle-wrap' bindtap='delete'><text>删除</text></view>
+    </view>
   </view>
-  {{speechText}}
+
   <button  catchtouchstart="streamRecord" catchtouchend="streamRecordEnd" class='record-btn' hover-class='hover'>记一笔</button>
 </view>
