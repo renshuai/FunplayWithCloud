@@ -1,7 +1,7 @@
 <!-- common.wxml -->
 <template name="general_basic">
   <view class='word-detect-container'>
-    <view wx:for="{{detectResult}}" class='words-list'>{{item.words}}</view>
+    <view wx:for="{{detectResult}}" class='words-list'><text selectable='true' >{{item.words}}</text></view>
   </view>
 </template>
 <template name="bankcard">
