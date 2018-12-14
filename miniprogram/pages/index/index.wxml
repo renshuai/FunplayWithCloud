@@ -12,5 +12,6 @@
         </block>
       </view>
     </block>
+    <view class='copyright'><text>© 2018 华创得一</text></view>
   </view>
 </view>

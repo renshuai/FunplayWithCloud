@@ -37,3 +37,9 @@
   font-size: 60rpx;
   margin-bottom: 10rpx;
 }
+
+.copyright {
+
+  padding: 15px 0;
+  text-align: center;
+}
